@@ -77,7 +77,7 @@ input[type=submit] {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79)); /* webkit */
 	cursor: pointer;
 }
-@media screen and (min-width:320px)
+@media screen and (min-width:200px)
 {
 		#contact {
 	width: 50%; margin:auto; padding: auto;
@@ -86,7 +86,7 @@ input[type=submit] {
 	-webkit-box-shadow: 0px 0px 8px #444;
 }
 h1 {
-	font-size: 5em; color: #445668; text-transform: uppercase;
+	font-size: 65px; color: #445668; text-transform: uppercase;
 	text-align: center; margin: 0 0 35px 0; text-shadow: 0px 1px 0px #f2f2f2;
 }
 label {
