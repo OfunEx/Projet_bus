@@ -1,23 +1,23 @@
-<!DOCTYPE html> 
-<html>
-    <head>	
-        <title>Formulaire </title>
-        <link rel="stylesheet" Type="text/css" href="formulaire.css">
-    </head>
-    <body> 
-        <div id="contact">
-            <h1> Trouver Un Trajet </h1>
-            <form action="#" method="post"> 
-                <fieldset>
-                    <label>Depart </label>
-                    <input type="text" name="nom" placeholder="entrez un point A"/>
+<script src="myscripts.js"></script> 
+<div id="form_trajet">
+    <h1> Trouver Un Trajet </h1>
+    <form action="modeles/formulaire.php" method="post"> 
+        <fieldset>
+            <label>Depart </label>
+            <select type="text" name="depart" placeholder="entrez un point A">
+            <?php 
+                
+                foreach ($arretSimple as $arret) {
+                    echo "<option value=".$arret[id_arret].">".$arret[nom_arret]."</option>";
+                }
+            ?>
+            </select>
 
-                    <label> Arivee </label> 
-                    <input type="text" name="mail" placeholder="entrez un point B" />
+            <label> Arivee </label> 
+            <input type="text" name="arrivee" placeholder="entrez un point B" />
 
-                    <input type="submit" name="sub"/>
-                </fieldset>
-            </form> 
-        </div>
-    </body> 
-</html>
+            <input type="submit" name="all_trajet"/>
+            <input type="submit" name="all_trajet"/>
+        </fieldset>
+    </form> 
+</div>
