@@ -9,7 +9,7 @@ CREATE TABLE `Trajet` (`id_trajet` int AUTO_INCREMENT NOT NULL,
 	PRIMARY KEY (`id_trajet`) ) ENGINE=InnoDB;  
 DROP TABLE IF EXISTS `Arret` ; 
 CREATE TABLE `Arret` (`id_arret` int AUTO_INCREMENT NOT NULL, 
-	`nom_arret` VARCHAR(20), 
+	`nom_arret` VARCHAR(60), 
 	PRIMARY KEY (`id_arret`) ) ENGINE=InnoDB;  
 DROP TABLE IF EXISTS `lier` ; 
 CREATE TABLE `lier` (`id_bus` int AUTO_INCREMENT NOT NULL, 

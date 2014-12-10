@@ -6,18 +6,24 @@ function maj_tab_four(){
     success: function(retour){
       $("#tab_gestion").html(retour);
       ajout_ecouteur();
-      ecouteur_data_tab()
+      ecouteur_data_tab();
          }
      });
 }
 
-$(document).ready(function(){
-    // Remove the `no-js` and add the `js` (because JS is enabled (we're using it!)
-    $('body').removeClass('no-js').addClass('js');
+function listener_all(){
 
-    // Assign it to a var so you don't traverse the DOM unnecessarily.
-    var useJS = $('body').hasClass('js');
-    if(useJS){
-        // JS Enabled
-    }
+}
+
+function listener_short(){
+  
+}
+
+$(document).ready(function(){
+    
+    $('#form').attr("action", "#");
+    listener_short();
+    listener_all();
+    
+    
 });
