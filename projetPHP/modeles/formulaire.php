@@ -38,5 +38,13 @@ If (isset($_GET['auto']) == 1 || isset($_POST['auto']) == 1)
         return $arret;
      }
 
+     function court_trajet(){
+
+     }
+
+     function all_trajet(){
+
+     }
+
 
 ?>

@@ -3,28 +3,25 @@
     <h1> Trouver Un Trajet </h1>
     <form id="form" action="modeles/formulaire.php" method="post"> 
         <fieldset>
-            <label>Depart </label>
-            <select type="text" name="depart" placeholder="entrez un point A">
-            <?php 
-
+            <label for="depart">Depart </label>
+            <input data-type="search" data-lastval="" id="depart" name="depart" placeholder="entrez un point B"/>
+            <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true">
+            <?php
+                $arretSimple = recup_arret();
                 foreach ($arretSimple as $arret) {
-                    echo "<option value=".$arret[id_arret].">".$arret[nom_arret]."</option>";
+                    echo "<li><a href=\"#\" value=".$arret[id_arret].">".$arret[nom_arret]."</a></li>";
                 }
             ?>
-            </select>
+            </ul>            
 
-            <label> Arivee </label> 
-            <select type="text" name="arrivee" placeholder="entrez un point B">
-            <?php 
-
-                foreach ($arretSimple as $arret) {
-                    echo "<option value=".$arret[id_arret].">".$arret[nom_arret]."</option>";
-                }
-            ?>
-            </select>
-
-            <input id="all" type="submit" name="all_trajet"/>
+            <label for="arrivee"> Arivee </label> 
+            <input type="text" id="arrivee" name="arrivee" placeholder="entrez un point B"/>
+            
+            <input id="all" type="submit" name="all_trajet"/><br>
             <input id="short" type="submit" name="short_trajet"/>
         </fieldset>
     </form> 
+</div>
+<div id="trajet">
+
 </div>
